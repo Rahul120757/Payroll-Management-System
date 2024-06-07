@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PDF Downloader</h1>
+
+    <button id="downloadButton">Download PDF</button>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
+            var pdfPath = 'path/to/your/file.pdf';
+
+            // Creating a hidden link element
+            var link = document.createElement('a');
+            link.href = pdfPath;
+
+            // Setting the download attribute with the desired file name
+            link.download = 'downloaded_file.pdf';
+
+            // Appending the link to the document body
+            document.body.appendChild(link);
+
+            // Triggering the click event of the link to start the download
+            link.click();
+
+            // Removing the link from the document body
+            document.body.removeChild(link);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="chart" id="leavesChartContainer">
+            <h2>Leaves Taken</h2>
+            <canvas id="leavesChart"></canvas>
+        </div>
+        <div class="chart" id="hoursChartContainer">
+            <h2>Working Hours</h2>
+            <canvas id="hoursChart"></canvas>
+        </div>
+        <div class="chart" id="salaryChartContainer">
+            <h2>Past Salary</h2>
+            <canvas id="salaryChart"></canvas>
+        </div>
+    </div>
+
+    <div class="payroll">
+        <h2>Payroll Summary</h2>
+        <table id="payrollTable">
+            <!-- Payroll summary will be populated using JavaScript -->
+        </table>
+    </div>
+    <div class="events">
+        <h2>Upcoming Events</h2>
+        <ul id="eventsList">
+            <!-- Events will be populated using JavaScript -->
+        </ul>
+    </div>
+</body>
+</html>
